@@ -7,12 +7,20 @@ using static oop03.Program;
 
 namespace oop03
 {
-    internal class employee
+    public enum SecurityLevel
+    {
+        Guest,
+        Developer,
+        Secretary,
+        DBA
+    }
+
+    public class employee
     {
         public int Id { get; set; }
         public string Name { get; set; }
         public SecurityLevel Security { get; set; }
-        public DateTime HireDate { get; set; }
+        public HiringDate HireDate { get; set; }
 
         private char gender;
         private decimal _salary;
@@ -29,7 +37,6 @@ namespace oop03
             }
         }
 
-
         public decimal Salary
         {
             get { return _salary; }
@@ -45,13 +52,11 @@ namespace oop03
         public override string ToString()
         {
             return $"Id: {Id}\n" +
-                   $"Name : {Name}\n" +
+                   $"Name: {Name}\n" +
                    $"Gender: {Gender}\n" +
-                   $"Security: {Security}\n" +
-                   $"Hire Date: {HireDate.ToShortDateString()}\n" +
+                   $"Security Level: {Security}\n" +
+                   $"Hire Date: {HireDate}\n" +
                    $"Salary: {string.Format("{0:C}", Salary)}";
         }
     }
-
- 
 }

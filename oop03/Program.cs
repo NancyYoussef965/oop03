@@ -6,13 +6,13 @@ namespace oop03
     {
 
         #region Q1
-        public enum SecurityLevel
-        {
-            Guest,
-            Developer,
-            Secretary,
-            DBA
-        }
+        //public enum SecurityLevel
+        //{
+        //    Guest,
+        //    Developer,
+        //    Secretary,
+        //    DBA
+        //}
         #endregion
         static void Main(string[] args)
         {
@@ -20,23 +20,24 @@ namespace oop03
             #region Q1
             employee emp = new employee()
             {
-                Id = 101,
-                Name = "nancy youssef",
+                Id = 1,
+                Name = "Nana Youssef",
                 Gender = 'F',
                 Security = SecurityLevel.Developer,
-                Salary = 12000.50m,
-                HireDate = new DateTime(2021, 5, 15)
-
-
-
+                Salary = 15000,
+                HireDate = new HiringDate(24, 7, 2025)
             };
-            Console.WriteLine(emp.ToString());
+
+            Console.WriteLine(emp);
 
 
 
             #endregion
 
-            #region
+            #region Q2
+        
+
+
             #endregion
 
             #region
