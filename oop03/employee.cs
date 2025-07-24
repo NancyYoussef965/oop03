@@ -49,6 +49,17 @@ namespace oop03
             }
         }
 
+
+        public employee(int id, string name, char gender, SecurityLevel security, HiringDate hiringDate, decimal salary)
+        {
+            Id = id;
+            Name = name;
+            Gender = gender;   
+            Security = security;
+            HireDate = hiringDate;
+            Salary = salary;         
+        }
+
         public override string ToString()
         {
             return $"Id: {Id}\n" +

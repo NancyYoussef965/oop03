@@ -5,38 +5,40 @@ namespace oop03
     internal class Program
     {
 
-        #region Q1
-        //public enum SecurityLevel
-        //{
-        //    Guest,
-        //    Developer,
-        //    Secretary,
-        //    DBA
-        //}
-        #endregion
+      
         static void Main(string[] args)
         {
 
             #region Q1
-            employee emp = new employee()
-            {
-                Id = 1,
-                Name = "Nana Youssef",
-                Gender = 'F',
-                Security = SecurityLevel.Developer,
-                Salary = 15000,
-                HireDate = new HiringDate(24, 7, 2025)
-            };
+            //employee emp = new employee()
+            //{
+            //    Id = 1,
+            //    Name = "Nana Youssef",
+            //    Gender = 'F',
+            //    Security = SecurityLevel.Developer,
+            //    Salary = 15000,
+            //    HireDate = new HiringDate(24, 7, 2025)
+            //};
 
-            Console.WriteLine(emp);
+            //Console.WriteLine(emp);
 
 
 
             #endregion
 
-            #region Q2
-        
+            #region Q3
 
+            employee[] EmpArr = new employee[3];
+
+            EmpArr[0] = new employee(1, "Ali", 'M', SecurityLevel.DBA, new HiringDate(1, 1, 2020), 20000);
+            EmpArr[1] = new employee(2, "Sara", 'F', SecurityLevel.Guest, new HiringDate(5, 6, 2022), 8000);
+            EmpArr[2] = new employee(3, "Mohamed", 'M', SecurityLevel.Developer, new HiringDate(10, 3, 2021), 25000);
+
+            foreach (var emp in EmpArr)
+            {
+                Console.WriteLine(emp);
+                Console.WriteLine("-------------------------");
+            }
 
             #endregion
 
